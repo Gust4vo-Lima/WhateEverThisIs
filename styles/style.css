@@ -1,0 +1,236 @@
+@import url('https://fonts.cdnfonts.com/css/thegoodmonolith');
+@import url('https://fonts.cdnfonts.com/css/share-tech-mono');
+
+:root{
+  --bodycolor: #180000;
+  --fontcolor: #E8F9FD;
+  --linkcolor: #CF7500;
+  --titlefont: 'TheGoodMonolith', sans-serif;
+  --bodyfont: 'Share Tech Mono', sans-serif;
+}
+
+/* Main page */
+
+body{
+  background-color: var(--bodycolor);
+  background-image: url("https://www.transparenttextures.com/patterns/dark-denim-3.png");
+}
+
+.logo{
+  height: 30px;
+  width: 30px;
+}
+
+header{
+  box-shadow: #F0A500 0px 0px 0px 2px inset,
+  #000000 10px 10px 0px -2px,
+  #F0A500 10px 10px;
+}
+
+.nav-link{
+  color: var(--fontcolor);
+  font-family: var(--titlefont);
+  margin-bottom: 2px;
+}
+
+.theme-color{
+  color: var(--fontcolor);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='orange' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.navbar-toggler{
+  border: none;
+}
+
+.glitch-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.glitch {
+  position: relative;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--fontcolor);
+  letter-spacing: 5px;
+  z-index: 1;
+  font-family: var(--titlefont);
+}
+
+.glitch:before,
+.glitch:after {
+  display: block;
+  content: attr(data-glitch);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+
+.glitch:before {
+  animation: glitch-color 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  color: #F0A500;
+  z-index: -1;
+}
+
+.glitch:after {
+  animation: glitch-color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+  color: #104428;
+  z-index: -2;
+}
+
+@keyframes glitch-color {
+  0% {
+     transform: translate(0);
+  }
+
+  20% {
+     transform: translate(-3px, 3px);
+  }
+
+  40% {
+     transform: translate(-3px, -3px);
+  }
+
+  60% {
+     transform: translate(3px, 3px);
+  }
+
+  80% {
+     transform: translate(3px, -3px);
+  }
+
+  to {
+     transform: translate(0);
+  }
+}
+
+.about-me-title{
+  font-family: var(--titlefont);
+}
+
+.about-me{
+  box-shadow: #F0A500 0px 0px 0px 2px inset,
+  #0d0d0d 10px 10px 0px -2px,
+  #F0A500 10px 10px;
+  font-family: var(--bodyfont);
+  color: var(--fontcolor);
+}
+
+.contact{
+  color: var(--fontcolor);
+  box-shadow: #F0A500 0px 0px 0px 2px inset,
+  #0d0d0d 10px 10px 0px -2px,
+  #F0A500 10px 10px;
+  font-family: var(--bodyfont);
+  color: var(--fontcolor);
+  width: 600px;
+}
+
+.reach-me-title{
+  font-family: var(--titlefont);
+}
+
+.projects{
+  color: var(--fontcolor);
+  box-shadow: #F0A500 0px 0px 0px 2px inset,
+  #0d0d0d 10px 10px 0px -2px,
+  #F0A500 10px 10px;
+  font-family: var(--bodyfont);
+  color: var(--fontcolor);
+  width: 600px;
+}
+
+.mail{
+  margin-top: -4px;
+}
+
+.links{
+  color: var(--linkcolor);
+  font-style: italic;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+}
+
+.icons a{
+  color: var(--linkcolor);
+  width: 50px;
+  text-decoration: none;
+  justify-content: space-between;
+}
+
+@media(max-width: 620px){
+  .contact-projects{
+    flex-direction: column;
+    gap: 48px;
+  }
+  
+}
+
+/* About me Page */
+
+.about-me-img-countainer{
+  box-shadow: #F0A500 0px 0px 0px 2px inset,
+  #0d0d0d 10px 10px 0px -2px,
+  #F0A500 10px 10px;
+  max-width: 370px;
+  
+}
+.about-me-img{
+  max-width:  375px;
+  border-radius: 10px;
+  display: block;
+}
+
+.not-me{
+  color: var(--fontcolor);
+  font-family: var(--titlefont);
+}
+
+@media(max-width: 470px){
+  .about-me-img{
+    max-width: 200px;
+  }
+
+  .about-me-img-countainer{
+    max-width: 210px;
+  }
+  
+}
+
+/* Contact Page */
+
+.form span{
+  background-color: var(--linkcolor);
+  border: #F0A500 solid 1px;
+  border-radius: 0;
+  color: var(--fontcolor);
+  font-family: var(--titlefont);
+}
+
+.form input{
+  background-color: #F0A500;
+  border: var(--linkcolor) solid 1px;
+  color: var(--fontcolor);
+  border-radius: 0;
+  font-family: var(--bodyfont);
+
+}
+
+.input-border{
+  box-shadow: #F0A500 0px 0px 0px 2px inset,
+  #0d0d0d 10px 10px 0px -2px,
+  #F0A500 10px 10px;
+  
+}
